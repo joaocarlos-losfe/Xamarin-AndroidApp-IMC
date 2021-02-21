@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalcIMC.MainPage"
+             Background="#FFFFFF">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackLayout Grid.Row="0" Padding="30">
+            <Image Source="logoApp.png"/>
+            <Label Margin="0,30,0,0" Text="Calcule o seu" HorizontalTextAlignment="Center" FontSize="30" TextColor="#12375B"/>
+            <Label Text="IMC" HorizontalTextAlignment="Center" FontSize="30" TextColor="#12375B" FontAttributes="Bold"/>
+            <Label Text="Porque é importante controlar sua saúde" HorizontalTextAlignment="Center" FontSize="16" TextColor="#12375B"/>
+            <Button Text="Saber mais" BackgroundColor="#FFFFFF" TextColor="#40A4FC" CornerRadius="30"/>
+        </StackLayout>
+
+        <Frame BackgroundColor="#40A4FC" Grid.Row="1">
+            <Button x:Name="startCalcBtn" Text="Começar" TextTransform="Uppercase" BackgroundColor="#FFFFFF" FontSize="18" CornerRadius="30" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="300" Clicked="startCalcBtn_Clicked"/>
+        </Frame>
+    </Grid>
+
+</ContentPage>

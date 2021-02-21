@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalcIMC.DataCollect">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <ScrollView>
+                <StackLayout Grid.Row="0" Padding="30">
+                    <Label Text="Insira os dados correspondentes para calcular o seu IMC (indice de massa corporal)" TextColor="#12375B" FontSize="18" FontAttributes="Bold"  HorizontalTextAlignment="Center"/>
+
+                    <StackLayout Margin="0,100,0,0">
+                        <Label Text="Informe seu peso" HorizontalTextAlignment="Center" FontSize="24" TextColor="#12375B"/>
+
+                        <StackLayout Orientation="Horizontal"  HorizontalOptions="Center">
+                            <Entry x:Name="kgEntry" Placeholder="kg" FontSize="20" Keyboard="Numeric"  WidthRequest="100" VerticalOptions="End" HorizontalTextAlignment="End"/>
+                            <Image Source="peso.png" WidthRequest="30" HeightRequest="30" VerticalOptions="Center"/>
+                        </StackLayout>
+
+                        <Label Margin="0,50,0,0" Text="Informe sua altura" HorizontalTextAlignment="Center" FontSize="24" TextColor="#12375B"/>
+
+                        <StackLayout Orientation="Horizontal"  HorizontalOptions="Center">
+                            <Entry x:Name="cmEntry" Placeholder="cm" FontSize="20" Keyboard="Numeric" WidthRequest="100" VerticalOptions="End" HorizontalTextAlignment="End"/>
+                            <Image Source="altura.png" WidthRequest="30" HeightRequest="30" VerticalOptions="Center"/>
+                        </StackLayout>
+
+                        <Label Margin="0,50,0,0" Text="Informe sua idade" HorizontalTextAlignment="Center" FontSize="24" TextColor="#12375B"/>
+
+                        <StackLayout Orientation="Horizontal"  HorizontalOptions="Center">
+                            <Entry x:Name="anEnty" Placeholder="anos" FontSize="20" Keyboard="Numeric" WidthRequest="100" VerticalOptions="End" HorizontalTextAlignment="End"/>
+                            <Image Source="idade.png" WidthRequest="30" HeightRequest="30" VerticalOptions="Center"/>
+                        </StackLayout>
+
+                    </StackLayout>
+
+                </StackLayout>
+            </ScrollView>
+               
+            <Frame BackgroundColor="#40A4FC" Grid.Row="1">
+                <Button x:Name="startIMCCalcBtn" Text="Iniciar calculo" TextTransform="Uppercase" BackgroundColor="#FFFFFF" FontSize="18" CornerRadius="30" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="300" Clicked="startIMCCalcBtn_Clicked"/>
+            </Frame>
+        </Grid>
+       
+    </ContentPage.Content>
+</ContentPage>
